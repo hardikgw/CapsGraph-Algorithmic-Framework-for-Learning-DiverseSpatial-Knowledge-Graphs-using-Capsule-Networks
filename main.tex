@@ -1,0 +1,107 @@
+%%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
+\documentclass[sigconf]{acmart}
+%%%% As of March 2017, [siggraph] is no longer used. Please use sigconf (above) for SIGGRAPH conferences.
+
+%%%% Proceedings format for SIGPLAN conferences 
+% \documentclass[sigplan, anonymous, review]{acmart}
+
+%%%% Proceedings format for SIGCHI conferences
+% \documentclass[sigchi, review]{acmart}
+
+%%%% To use the SIGCHI extended abstract template, please visit
+% https://www.overleaf.com/read/zzzfqvkmrfzn
+
+
+\usepackage{booktabs} % For formal tables
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%%%%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+\usepackage{algorithm}
+
+
+% Graph Libraries TIKZ START
+\usepackage{tikz}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+% Declare layers
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\tikzstyle{vertex}=[circle,fill=black!25,minimum size=20pt,inner sep=0pt]
+\tikzstyle{selected vertex} = [vertex, fill=red!24]
+\tikzstyle{edge} = [draw,thick,-]
+\tikzstyle{weight} = [font=\small]
+\tikzstyle{selected edge} = [draw,line width=5pt,-,red!50]
+\tikzstyle{ignored edge} = [draw,line width=5pt,-,black!20]
+% Graph Libraries TIKZ END
+
+
+\begin{document}
+\title{CapsGraph : Algorithmic Framework for Learning Diverse Spatial Knowledge Graphs using Capsule Networks}
+
+\def\matthias#1{{\sc \textcolor{green}{Matthias says: }}{\marrow\sf \textcolor{red}{#1}}}
+\def\pavlos#1{{\sc \textcolor{blue}{Pavlos says: }}{\marrow\sf \textcolor{red}{#1}}}
+\def\hardik#1{{\sc \textcolor{red}{Hardik says: }}{\marrow\sf \textcolor{red}{#1}}}
+
+
+\author{Hardik Patel}
+\affiliation{%
+  \institution{Dep. of Computational and Data Sciences}
+  \institution{George Mason University}
+  \city{Fairfax}
+  \state{Virginia}
+}
+\email{hpatel12@gmu.edu}
+
+
+% \author{Pavlos Paraskevopoulos}
+% \affiliation{%
+%   \institution{Dep. of Computational and Data Sciences, Datalab}
+%   \institution{George Mason University}
+%   \city{Fairfax}
+%   \state{Virginia}
+% }
+% \email{pparaske@gmu.edu}
+
+\author{Matthias Renz}
+\affiliation{%
+  \institution{Professor, Data Science}
+  \institution{University of Kiel}
+  \city{Kiel}
+  \state{Germany}
+}
+\email{mr@informatik.uni-kiel.de}
+
+
+\input{abstract_20}
+
+
+% \keywords{data fusion, Heterogeneous Networks, knowledge enrichment, Twitter, OSM, Trajectories}
+
+
+\maketitle
+
+\input{introduction_20}
+% \input{motivation}
+\input{related}
+\input{background}
+\input{method_20}
+% \input{experimenrts}
+% \input{conclusions}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{capsgraph,text-vectors}
+
+\end{document}
